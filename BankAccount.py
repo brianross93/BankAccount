@@ -28,8 +28,8 @@ class BankAccount:
         return balance
     
     def add_interest(self, balance):
-        self.balance = self.balance * 1.00083
-        print(f"Your balance is {self.balance}")
+        self.balance = round(self.balance * 1.00083, 2)
+        print(f"Your balance with added interest is {self.balance}")
 
     def print_receipt(self, name, account_number, balance):
         name = self.full_name
@@ -46,5 +46,9 @@ class BankAccount:
 
     # interest = balance *  0.00083
 
-TigersBank = BankAccount("Tigers", 333322222, 765432, 1000) 
-TigersBank.print_receipt("Tigers", 33333234543, 34543)
+Howard_Starbucks = BankAccount("Howard Starbucks", 333322222, 765432, 1000) 
+Howard_Starbucks.withdraw(500)
+Howard_Starbucks.deposit(250)
+Howard_Starbucks.get_balance(1)
+Howard_Starbucks.add_interest(1)
+Howard_Starbucks.print_receipt("Howard Starbucks", 333322222,1)
