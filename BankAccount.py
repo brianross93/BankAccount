@@ -48,7 +48,7 @@ class BankAccount:
         print(f"Here's your Receipt: {name}, {account_number}, ${balance}")
 
 
-
+#Test Account Users
 Howard_Starbucks = BankAccount("Howard Starbucks", 333322222, 765432, 1000) 
 Howard_Starbucks.withdraw(500)
 Howard_Starbucks.deposit(250)
@@ -61,6 +61,8 @@ Suellen_Mishkin.withdraw(500)
 Suellen_Mishkin.deposit(250)
 Suellen_Mishkin.get_balance(1)
 Suellen_Mishkin.add_interest(1)
+#If we only use one argument in the method, the other arguments don't matter
+#Here I have Howard Starbucks as the name, but it will still print Suellen
 Suellen_Mishkin.print_receipt("Howard Starbucks", 333322222,1)
 
 Benny_Cashman = BankAccount("Benny Cashman", 77776898, 99988765, 27.54)
